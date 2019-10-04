@@ -21,7 +21,7 @@ class SightingContentDisplay extends React.Component {
     
     refreshList() {
         
-        let url = 'http://127.0.0.1:8000/dataapis/birbsighting/?'
+        let url = 'https://lwbjbirbblog.herokuapp.com/dataapis/birbsighting/?'
         url += 'species=' + this.state.speciesFilter + '&'
         url += 'location=' + this.state.locationFilter + '&'
         url += 'date=' + this.state.dateFilter + '&'

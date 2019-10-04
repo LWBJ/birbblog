@@ -18,7 +18,7 @@ class SpeciesContentDisplay extends React.Component {
     }
     
     refreshList() {
-        let url = 'http://127.0.0.1:8000/dataapis/species/?'
+        let url = 'https://lwbjbirbblog.herokuapp.com/dataapis/species/?'
         url += "name=" + this.state.nameFilter + '&'
         url += "page=" + this.state.pageFilter
         
