@@ -1,0 +1,1 @@
+web: gunicorn birbblog.wsgi --log-file -
