@@ -80,7 +80,7 @@ function SpeciesContentFilter(props) {
                 type="button"
                 className="btn btn-secondary"
                 onClick={()=>{
-                    onFilter('', 1)
+                    onFilter('', 1, '')
                     handleReset()
                 }}
                 disabled={!dirty || isSubmitting}
