@@ -22,6 +22,9 @@ class Species(models.Model):
   rarity = models.CharField(max_length=1, choices=RARITY)
   location = models.ManyToManyField('Location', through=BirbSighting)
   
+  class Meta:
+    ordering = ['name']
+  
   def __str__(self):
     return self.name
   
