@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import LocationContentItem from './LocationContentItem'
-import LocationSpeciesContentFilter from './LocationSpeciesContentFilter'
+import LocationContentFilter from './LocationContentFilter'
 
 class LocationContentDisplay extends React.Component {
     constructor(props) {
@@ -54,7 +54,7 @@ class LocationContentDisplay extends React.Component {
                   
                   <div class="collapse navbar-collapse" id="LocationContentFilterNavbar">
                     <div className="container-fluid">
-                      <LocationSpeciesContentFilter onFilter={this.filter} resultsCount={this.state.resultsCount} />
+                      <LocationContentFilter onFilter={this.filter} resultsCount={this.state.resultsCount} />
                     </div>
                   </div>
                 </nav>

@@ -1,7 +1,7 @@
 import React from 'react'
 import {Formik, Form, Field} from 'formik'
 
-function LocationSpeciesContentFilter(props) {
+function LocationContentFilter(props) {
     let onFilter = props.onFilter
     
     let pageOptions = []
@@ -29,17 +29,17 @@ function LocationSpeciesContentFilter(props) {
             
                 <div className="col-12 col-sm-6">
                   <div className="form-group">
-                    <label htmlFor='nameFilter'>Name</label>
-                    <Field name='nameFilter' id='nameFilter' type='text' className="form-control"/>
+                    <label htmlFor='locationNameFilter'>Name</label>
+                    <Field name='nameFilter' id='locationNameFilter' type='text' className="form-control"/>
                   </div>
                 </div>
                 
                 <div className="col-12 col-sm-6">
                   <div className="form-group">
-                    <label htmlFor='pageFilter'>Page</label>
+                    <label htmlFor='locationPageFilter'>Page</label>
                     <select
                         name='pageFilter'
-                        id='pageFilter'
+                        id='locationPageFilter'
                         value={values.pageFilter}
                         onChange = {handleChange}
                         onBlur = {handleBlur}
@@ -79,4 +79,4 @@ function LocationSpeciesContentFilter(props) {
     )
 }
 
-export default LocationSpeciesContentFilter
+export default LocationContentFilter

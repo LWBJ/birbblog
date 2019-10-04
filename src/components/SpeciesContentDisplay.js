@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import SpeciesContentItem from './SpeciesContentItem'
-import LocationSpeciesContentFilter from './LocationSpeciesContentFilter'
+import SpeciesContentFilter from './SpeciesContentFilter'
 
 class SpeciesContentDisplay extends React.Component {
     constructor(props) {
@@ -10,6 +10,7 @@ class SpeciesContentDisplay extends React.Component {
             queryset : [],
             nameFilter : '',
             pageFilter : 1,
+            rarityFilter : '',
             resultsCount : 0,
         }
         
@@ -20,6 +21,7 @@ class SpeciesContentDisplay extends React.Component {
     refreshList() {
         let url = 'https://lwbjbirbblog.herokuapp.com/dataapis/species/?'
         url += "name=" + this.state.nameFilter + '&'
+        url += "rarity=" + this.state.rarityFilter + '&'
         url += "page=" + this.state.pageFilter
         
         axios.get(url)
@@ -28,8 +30,8 @@ class SpeciesContentDisplay extends React.Component {
         )
     }
     
-    filter(nameFilter, pageFilter) {
-        this.setState({nameFilter: nameFilter, pageFilter: pageFilter}, ()=>{this.refreshList()})
+    filter(nameFilter, pageFilter, rarityFilter) {
+        this.setState({nameFilter: nameFilter, pageFilter: pageFilter, rarityFilter : rarityFilter}, ()=>{this.refreshList()})
     }
     
     componentDidMount() {
@@ -54,7 +56,7 @@ class SpeciesContentDisplay extends React.Component {
                   
                   <div class="collapse navbar-collapse" id="SpeciesContentFilterNavbar">
                     <div className="container-fluid">
-                        <LocationSpeciesContentFilter onFilter={this.filter} resultsCount={this.state.resultsCount} />
+                        <SpeciesContentFilter onFilter={this.filter} resultsCount={this.state.resultsCount} />
                     </div>
                   </div>
                 </nav>

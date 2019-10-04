@@ -10,6 +10,7 @@ class SightingContentDisplay extends React.Component {
             queryset: [],
             speciesFilter: '',
             locationFilter: '',
+            rarityFilter: '',
             dateFilter: '',
             pageFilter: 1,
             resultsCount: 0,
@@ -24,6 +25,7 @@ class SightingContentDisplay extends React.Component {
         let url = 'https://lwbjbirbblog.herokuapp.com/dataapis/birbsighting/?'
         url += 'species=' + this.state.speciesFilter + '&'
         url += 'location=' + this.state.locationFilter + '&'
+        url += 'rarity=' + this.state.rarityFilter + '&'
         url += 'date=' + this.state.dateFilter + '&'
         url += 'page=' + this.state.pageFilter
         
@@ -33,13 +35,14 @@ class SightingContentDisplay extends React.Component {
         )
     }
     
-    filter(speciesFilter, locationFilter, dateFilter, pageFilter) {
+    filter(speciesFilter, locationFilter, dateFilter, pageFilter, rarityFilter) {
         
         this.setState({ 
             speciesFilter : speciesFilter,
             locationFilter : locationFilter,
             dateFilter : dateFilter,
             pageFilter : pageFilter,
+            rarityFilter : rarityFilter,
         }, ()=>this.refreshList())
     }
     
