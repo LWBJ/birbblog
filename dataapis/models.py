@@ -8,7 +8,7 @@ class BirbSighting(models.Model):
   location = models.ForeignKey('Location', on_delete = models.SET_NULL, null=True)
   comments = models.TextField()
   
-  picture = models.ImageField(blank=True, upload_to='')
+  picture = models.CharField(blank=True, max_length=2000)
   
   class Meta:
     ordering = ['-date']
