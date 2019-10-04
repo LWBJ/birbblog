@@ -58,7 +58,8 @@ class SightingContentDisplay extends React.Component {
         
         return (
             <div className="container-fluid">
-              <nav class="navbar navbar-expand-lg mt-2">
+              <div className="row"><div className="col p-0">
+              <nav class="navbar navbar-expand-lg mt-2 p-0">
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#SightingContentFilterNavbar" aria-controls="SightingContentFilterNavbar" aria-expanded="false" aria-label="Toggle navigation">
                     <button class="btn btn-secondary">Expand Filter</button>
                   </button>
@@ -69,6 +70,7 @@ class SightingContentDisplay extends React.Component {
                     </div>
                   </div>
               </nav>
+              </div></div>
               
               <div className="row justify-content-between">
                 {listItems}

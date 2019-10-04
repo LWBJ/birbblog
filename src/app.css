@@ -5,7 +5,15 @@ body {
 }
 
 .content-item {
-  background-color: rgb(99, 87, 87);
+  background-color: rgb(99, 99, 99);
+}
+
+.content-item-Rare {
+  background-color: rgb(57, 66, 94)
+}
+
+.content-item-Uncommon {
+  background-color: rgb(62, 94, 57)
 }
 
 .tabbo {

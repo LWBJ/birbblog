@@ -7,8 +7,10 @@ function SightingContentItem(props) {
         picture = <img src={props.item.picture} alt="bird sighting" className='img-fluid'/>
     }
     
+    let contentItemClass = "content-item-" + props.item.rarity
+    
     return (
-        <div id={props.item.pk} className="col-md-6 my-2"><div className="border border-secondary rounded p-5 h-100 content-item">
+        <div id={props.item.pk} className="col-lg-6 my-2"><div className={"border border-secondary rounded p-3 p-lg-5 h-100 content-item " + contentItemClass}>
             <h2>{props.item.species_text}</h2>
             {picture}
             <br />

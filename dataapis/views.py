@@ -23,6 +23,11 @@ class BirbSightingViewSet(viewsets.ModelViewSet):
       pass
       
     try:
+      queryset = queryset.filter(species__rarity__icontains=params['rarity'])
+    except:
+      pass
+      
+    try:
       queryset = queryset.filter(location__name__icontains=params['location'])
     except:
       pass
@@ -58,6 +63,11 @@ class SpeciesViewSet(viewsets.ModelViewSet):
   def get_queryset(self):
     params = self.request.query_params
     queryset = Species.objects.all()
+    
+    try:
+      queryset = queryset.filter(rarity__icontains=params['rarity'])
+    except:
+      pass
     
     try:
       queryset = queryset.filter(name__icontains=params['name'])

@@ -8,9 +8,10 @@ function SpeciesContentItem(props) {
     
     let location_text = (props.item.location_text + '').split(',').map(i => <li>{i}</li>)
     let birbSighting = (props.item.birbsighting_set_text + '').split(',').map(i => <li>{i}</li>)
+    let contentItemClass = "content-item-" + props.item.rarity_text
     
     return (
-        <div id={props.item.pk} className="col-md-6 my-2"><div className="border border-secondary rounded p-5 h-100 content-item">
+        <div id={props.item.pk} className="col-lg-6 my-2"><div className={"border border-secondary rounded p-3 p-lg-5 h-100 content-item " + contentItemClass }>
           <h2>{props.item.name}</h2>
           {picture}
           <br />

@@ -7,7 +7,7 @@ function MainDisplay(props) {
     return(    
       <div className="container"><div className="row"><div className="col">
       
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <ul class="nav nav-tabs px-2" id="myTab" role="tablist">
           <li class="nav-item">
             <a class="nav-link active tabbo" id="SightingContentDisplay-tab" data-toggle="tab" href="#SightingContentDisplay" role="tab" aria-controls="SightingContentDisplay" aria-selected="true">Sightings</a>
           </li>
@@ -26,7 +26,7 @@ function MainDisplay(props) {
             <SightingContentDisplay />
           </div>
         
-          <div class="tab-pane fade" id="SpeciesContentDisplay" role="tabpanel" aria-labelledby="SpeciesContentDisplay-tab">
+          <div class="tab-pane fade p-0" id="SpeciesContentDisplay" role="tabpanel" aria-labelledby="SpeciesContentDisplay-tab">
             <SpeciesContentDisplay />
           </div>
         
