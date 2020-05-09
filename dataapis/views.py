@@ -11,7 +11,7 @@ class BirbSightingViewSet(viewsets.ModelViewSet):
   queryset =  BirbSighting.objects.all()
   serializer_class = BirbSightingSerializer
   parser_classes = (MultiPartParser, FormParser)
-  #permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+  permission_classes = [permissions.IsAuthenticatedOrReadOnly]
   
   def get_queryset(self):
     params = self.request.query_params
@@ -42,7 +42,7 @@ class BirbSightingViewSet(viewsets.ModelViewSet):
 class LocationViewSet(viewsets.ModelViewSet):
   queryset = Location.objects.all()
   serializer_class = LocationSerializer
-  #permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+  permission_classes = [permissions.IsAuthenticatedOrReadOnly]
   
   def get_queryset(self):
     params = self.request.query_params
@@ -58,7 +58,7 @@ class LocationViewSet(viewsets.ModelViewSet):
 class SpeciesViewSet(viewsets.ModelViewSet):
   queryset = Species.objects.all()
   serializer_class = SpeciesSerializer
-  #permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+  permission_classes = [permissions.IsAuthenticatedOrReadOnly]
   
   def get_queryset(self):
     params = self.request.query_params
